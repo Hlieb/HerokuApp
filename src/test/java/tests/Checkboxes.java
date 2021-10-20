@@ -26,6 +26,6 @@ public class Checkboxes {
         driver.findElement(By.xpath("//*[@type = 'checkbox'][2]")).isSelected();
         Assert.assertTrue(true,"Error");
         driver.findElement(By.xpath("//*[@type = 'checkbox'][2]")).click();
-        Assert.assertTrue(true,"Error");
+        Assert.assertFalse(false,"Error");
     }
 }
