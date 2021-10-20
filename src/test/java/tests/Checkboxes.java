@@ -8,10 +8,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class Checkboxes {
-
     @Test
     public void CheckboxesTest(){
-
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--incognito");
