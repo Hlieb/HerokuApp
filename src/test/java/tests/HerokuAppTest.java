@@ -16,7 +16,7 @@ public class HerokuAppTest {
     public void HerokuAppTest(){
         System.setProperty("webdriver.chrome.driver","src/test/resources/chromedriver.exe" );
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.setHeadless(false);
+        chromeOptions.setHeadless(true);
         chromeOptions.addArguments("--incognito");
         chromeOptions.addArguments("--disable-popup-blocking");
         WebDriver driver = new ChromeDriver(chromeOptions);
@@ -26,7 +26,7 @@ public class HerokuAppTest {
         WebElement inputField = driver.findElement(By.tagName("input"));
         inputField.sendKeys("1111");
         String textFromField = inputField.getAttribute("value");
-        Assert.assertEquals(textFromField, "1111");
+        Assert.assertEquals(textFromField, "111");
         driver.quit();
 
 
