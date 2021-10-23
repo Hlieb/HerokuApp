@@ -28,8 +28,5 @@ public class HerokuAppTest {
         String textFromField = inputField.getAttribute("value");
         Assert.assertEquals(textFromField, "111");
         driver.quit();
-
-
-
     }
 }

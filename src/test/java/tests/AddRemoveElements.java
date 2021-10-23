@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
@@ -24,12 +25,8 @@ public class AddRemoveElements {
         clickAddButton.click();
         WebElement deleteButton = driver.findElement(By.xpath("//*[@class='added-manually']"));
         deleteButton.click();
-        int addElements = driver.findElements(By.xpath("//*[@onclick='addElement()']")).size();
-        System.out.println("'Add' elements: " + addElements);
         int deleteElements = driver.findElements(By.xpath("//*[@class='added-manually']")).size();
-        System.out.println("'Delete' elements: " + deleteElements);
-        int allElements = addElements + deleteElements;
-        System.out.println("All elements: " + allElements);
+        Assert.assertEquals(deleteElements,1);
         driver.quit();
     }
 }
