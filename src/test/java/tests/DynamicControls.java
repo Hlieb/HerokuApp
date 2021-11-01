@@ -29,6 +29,7 @@ public class DynamicControls {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("message")));
         List<WebElement> checkbox = driver.findElements(By.xpath("//*[@type='checkbox']"));
         Assert.assertEquals(checkbox.size(),0,"Error");
+        driver.quit();
     }
 
     @Test

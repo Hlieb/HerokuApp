@@ -30,6 +30,7 @@ public class ContextMenu {
         actions.contextClick(box).perform();
         Alert alert = driver.switchTo().alert();
         Assert.assertEquals(alert.getText(),"You selected a context menu","Error");
+        driver.quit();
     }
 
     @Test
@@ -46,5 +47,6 @@ public class ContextMenu {
         actions.contextClick(box).perform();
         Alert alert = driver.switchTo().alert();
         alert.accept();
+        driver.quit();
     }
 }
